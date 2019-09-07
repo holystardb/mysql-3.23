@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Max|Win32">
+      <Configuration>Max</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{C722BD08-F959-438D-8036-4EE6EB41DED8}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\lib_debug\</OutDir>
+    <IntDir>.\debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\release\</OutDir>
+    <IntDir>.\release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'">
+    <OutDir>.\mysys___Win32_Max\</OutDir>
+    <IntDir>.\mysys___Win32_Max\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;SAFEMALLOC;SAFE_MUTEX;_WINDOWS;USE_SYMDIR;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\debug\mysys.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\debug\mysys.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\lib_debug\mysys.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;DBUG_OFF;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\release\mysys.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\release\mysys.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\lib_release\mysys.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;DBUG_OFF;_WINDOWS;USE_SYMDIR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\mysys___Win32_Max\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\mysys___Win32_Max\mysys.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\mysys___Win32_Max\</ObjectFileName>
+      <ProgramDataBaseFileName>.\mysys___Win32_Max\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\mysys___Win32_Max\mysys.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\lib_release\mysys-max.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="array.c">
+      <BrowseInformation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</BrowseInformation>
+    </ClCompile>
+    <ClCompile Include="charset.c" />
+    <ClCompile Include="checksum.c" />
+    <ClCompile Include="default.c" />
+    <ClCompile Include="errors.c" />
+    <ClCompile Include="getopt.c" />
+    <ClCompile Include="getopt1.c" />
+    <ClCompile Include="getvar.c" />
+    <ClCompile Include="hash.c" />
+    <ClCompile Include="list.c" />
+    <ClCompile Include="mf_brkhant.c" />
+    <ClCompile Include="mf_cache.c" />
+    <ClCompile Include="mf_casecnv.c" />
+    <ClCompile Include="mf_dirname.c" />
+    <ClCompile Include="mf_fn_ext.c" />
+    <ClCompile Include="mf_format.c" />
+    <ClCompile Include="mf_getdate.c" />
+    <ClCompile Include="mf_iocache.c" />
+    <ClCompile Include="mf_iocache2.c" />
+    <ClCompile Include="mf_keycache.c" />
+    <ClCompile Include="mf_loadpath.c" />
+    <ClCompile Include="mf_pack.c" />
+    <ClCompile Include="mf_pack2.c" />
+    <ClCompile Include="mf_path.c" />
+    <ClCompile Include="mf_qsort2.c" />
+    <ClCompile Include="mf_radix.c" />
+    <ClCompile Include="mf_same.c" />
+    <ClCompile Include="mf_sort.c" />
+    <ClCompile Include="mf_soundex.c" />
+    <ClCompile Include="mf_stripp.c" />
+    <ClCompile Include="mf_tempfile.c" />
+    <ClCompile Include="mf_wcomp.c" />
+    <ClCompile Include="mf_wfile.c" />
+    <ClCompile Include="mulalloc.c" />
+    <ClCompile Include="my_alarm.c" />
+    <ClCompile Include="my_alloc.c" />
+    <ClCompile Include="my_append.c" />
+    <ClCompile Include="my_bitmap.c" />
+    <ClCompile Include="my_chsize.c" />
+    <ClCompile Include="my_clock.c" />
+    <ClCompile Include="my_compress.c" />
+    <ClCompile Include="my_copy.c" />
+    <ClCompile Include="my_create.c" />
+    <ClCompile Include="my_delete.c" />
+    <ClCompile Include="my_div.c" />
+    <ClCompile Include="my_error.c" />
+    <ClCompile Include="my_fopen.c" />
+    <ClCompile Include="my_fstream.c" />
+    <ClCompile Include="my_getwd.c" />
+    <ClCompile Include="my_init.c" />
+    <ClCompile Include="my_lib.c" />
+    <ClCompile Include="my_lock.c" />
+    <ClCompile Include="my_lockmem.c" />
+    <ClCompile Include="my_lread.c" />
+    <ClCompile Include="my_lwrite.c" />
+    <ClCompile Include="my_malloc.c" />
+    <ClCompile Include="my_messnc.c" />
+    <ClCompile Include="my_mkdir.c" />
+    <ClCompile Include="my_net.c" />
+    <ClCompile Include="my_once.c" />
+    <ClCompile Include="my_open.c" />
+    <ClCompile Include="my_pread.c" />
+    <ClCompile Include="my_pthread.c" />
+    <ClCompile Include="my_quick.c" />
+    <ClCompile Include="my_read.c" />
+    <ClCompile Include="my_realloc.c" />
+    <ClCompile Include="my_redel.c" />
+    <ClCompile Include="my_rename.c" />
+    <ClCompile Include="my_seek.c" />
+    <ClCompile Include="my_static.c" />
+    <ClCompile Include="my_tempnam.c" />
+    <ClCompile Include="my_thr_init.c" />
+    <ClCompile Include="my_vsnprintf.c" />
+    <ClCompile Include="my_wincond.c" />
+    <ClCompile Include="my_winthread.c" />
+    <ClCompile Include="my_write.c" />
+    <ClCompile Include="ptr_cmp.c" />
+    <ClCompile Include="queues.c" />
+    <ClCompile Include="raid.cpp" />
+    <ClCompile Include="safemalloc.c" />
+    <ClCompile Include="string.c" />
+    <ClCompile Include="thr_alarm.c" />
+    <ClCompile Include="thr_lock.c">
+      <PreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EXTRA_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <ClCompile Include="thr_mutex.c" />
+    <ClCompile Include="thr_rwlock.c" />
+    <ClCompile Include="tree.c" />
+    <ClCompile Include="typelib.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mysys_priv.h" />
+    <ClInclude Include="my_static.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

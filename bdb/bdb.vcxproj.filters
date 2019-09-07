@@ -1,0 +1,456 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e86dc512-e6b7-4044-b6d0-f1da07c535ad}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{d5b0a380-dac2-4792-be16-d630f62e922c}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="btree\bt_compare.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_conv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_curadj.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_cursor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_delete.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_put.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_reclaim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_recno.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_rsearch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_search.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_split.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_upgrade.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\bt_verify.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="btree\btree_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\crdel_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\crdel_rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cxx\cxx_app.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cxx\cxx_except.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cxx\cxx_lock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cxx\cxx_log.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cxx\cxx_mpool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cxx\cxx_table.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cxx\cxx_txn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_am.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\db_byteorder.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_cam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_conv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_dispatch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_dup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\db_err.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\db_getlong.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_iface.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_join.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\db_log2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_meta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_overflow.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_pr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_reclaim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_ret.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="env\db_salloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="env\db_shash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_upg.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_upg_opd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_vrfy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="db\db_vrfyutil.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dbm\dbm.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="env\env_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="env\env_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="env\env_recover.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="env\env_region.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_conv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_dup.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_func.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_meta.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_page.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_reclaim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_upgrade.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hash\hash_verify.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hsearch\hsearch.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\lock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\lock_conflict.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\lock_deadlock.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\lock_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\lock_region.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\lock_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lock\lock_util.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_archive.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_compare.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_findckp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_get.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_put.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log_register.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_alloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_bh.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_fget.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_fopen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_fput.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_fset.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_region.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_register.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_sync.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mp\mp_trickle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mutex\mut_tas.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mutex\mutex.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_abs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_alloc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_dir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_errno.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_fid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_finit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_fsync.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_handle.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_oflags.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_region.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_rename.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_root.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_rpath.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_rw.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_seek.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_sleep.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_spin.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_tmpdir.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os_win32\os_type.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="os\os_unlink.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_conv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_files.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_method.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_stat.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_upgrade.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qam\qam_verify.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clib\strcasecmp.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="txn\txn.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="txn\txn_auto.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="txn\txn_rec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="txn\txn_region.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\util_log.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="common\util_sig.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xa\xa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xa\xa_db.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="xa\xa_map.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,34 @@
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(368,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  Performing Custom Build Tools
+   Assembling: D:\mysql-3.23\strings\Strings.asm
+  Performing Custom Build Tools
+   Assembling: D:\mysql-3.23\strings\Strxmov.asm
+  atof.c
+  bchange.c
+  bcmp.c
+  bfill.c
+  bmove512.c
+  ctype-big5.c
+  ctype-czech.c
+ctype-czech.c : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  ctype-euc_kr.c
+  ctype-gb2312.c
+  ctype-gbk.c
+  ctype-sjis.c
+  ctype-tis620.c
+  ctype-ujis.c
+  ctype.c
+  int2str.c
+  llstr.c
+  longlong2str.c
+  r_strinstr.c
+  str2int.c
+  strtol.c
+  正在生成代码...
+  正在编译...
+  strtoll.c
+  strtoul.c
+  strtoull.c
+  strxnmov.c
+  正在生成代码...
+LINK : fatal error LNK1181: 无法打开输入文件“..\lib_debug\\.obj”

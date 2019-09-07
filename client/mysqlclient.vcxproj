@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{95101ECC-1885-40AC-864D-04780DD21405}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\release\</OutDir>
+    <IntDir>.\release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\lib_debug\</OutDir>
+    <IntDir>.\client_debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../include;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;DBUG_OFF;_WINDOWS;USE_TLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\release\mysqlclient.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\release\mysqlclient.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\lib_release\mysqlclient.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../include;../;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;SAFEMALLOC;SAFE_MUTEX;_WINDOWS;USE_TLS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\client_debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\client_debug\mysqlclient.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\client_debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\client_debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\debug\mysqlclient.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\lib_debug\mysqlclient.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dbug\dbug.c" />
+    <ClCompile Include="..\libmysql\errmsg.c" />
+    <ClCompile Include="..\libmysql\get_password.c" />
+    <ClCompile Include="..\libmysql\libmysql.c" />
+    <ClCompile Include="..\libmysql\net.c" />
+    <ClCompile Include="..\libmysql\password.c" />
+    <ClCompile Include="..\mysys\array.c" />
+    <ClCompile Include="..\mysys\charset.c" />
+    <ClCompile Include="..\mysys\default.c" />
+    <ClCompile Include="..\mysys\errors.c" />
+    <ClCompile Include="..\mysys\getopt.c" />
+    <ClCompile Include="..\mysys\getopt1.c" />
+    <ClCompile Include="..\mysys\getvar.c" />
+    <ClCompile Include="..\mysys\list.c" />
+    <ClCompile Include="..\mysys\mf_cache.c" />
+    <ClCompile Include="..\mysys\mf_casecnv.c" />
+    <ClCompile Include="..\mysys\mf_dirname.c" />
+    <ClCompile Include="..\mysys\mf_fn_ext.c" />
+    <ClCompile Include="..\mysys\mf_format.c" />
+    <ClCompile Include="..\mysys\mf_iocache.c" />
+    <ClCompile Include="..\mysys\mf_loadpath.c" />
+    <ClCompile Include="..\mysys\mf_pack.c" />
+    <ClCompile Include="..\mysys\mf_path.c" />
+    <ClCompile Include="..\mysys\mf_tempfile.c" />
+    <ClCompile Include="..\mysys\mf_unixpath.c" />
+    <ClCompile Include="..\mysys\mf_wcomp.c" />
+    <ClCompile Include="..\mysys\mulalloc.c" />
+    <ClCompile Include="..\mysys\my_alloc.c" />
+    <ClCompile Include="..\mysys\my_compress.c" />
+    <ClCompile Include="..\mysys\my_create.c" />
+    <ClCompile Include="..\mysys\my_delete.c" />
+    <ClCompile Include="..\mysys\my_div.c" />
+    <ClCompile Include="..\mysys\my_error.c" />
+    <ClCompile Include="..\mysys\my_fopen.c" />
+    <ClCompile Include="..\mysys\my_fstream.c" />
+    <ClCompile Include="..\mysys\my_getwd.c" />
+    <ClCompile Include="..\mysys\my_init.c" />
+    <ClCompile Include="..\mysys\my_lib.c" />
+    <ClCompile Include="..\mysys\my_malloc.c" />
+    <ClCompile Include="..\mysys\my_messnc.c" />
+    <ClCompile Include="..\mysys\my_net.c" />
+    <ClCompile Include="..\mysys\my_once.c" />
+    <ClCompile Include="..\mysys\my_open.c" />
+    <ClCompile Include="..\mysys\my_pread.c" />
+    <ClCompile Include="..\mysys\my_pthread.c" />
+    <ClCompile Include="..\mysys\my_read.c" />
+    <ClCompile Include="..\mysys\my_realloc.c" />
+    <ClCompile Include="..\mysys\my_seek.c" />
+    <ClCompile Include="..\mysys\my_static.c" />
+    <ClCompile Include="..\mysys\my_tempnam.c" />
+    <ClCompile Include="..\mysys\my_thr_init.c" />
+    <ClCompile Include="..\mysys\my_wincond.c" />
+    <ClCompile Include="..\mysys\my_winthread.c" />
+    <ClCompile Include="..\mysys\my_write.c" />
+    <ClCompile Include="..\mysys\safemalloc.c" />
+    <ClCompile Include="..\mysys\string.c" />
+    <ClCompile Include="..\mysys\thr_mutex.c" />
+    <ClCompile Include="..\mysys\typelib.c" />
+    <ClCompile Include="..\sql\violite.c" />
+    <ClCompile Include="..\strings\bchange.c" />
+    <ClCompile Include="..\strings\bmove.c" />
+    <ClCompile Include="..\strings\bmove_upp.c" />
+    <ClCompile Include="..\strings\ctype-big5.c" />
+    <ClCompile Include="..\strings\ctype-czech.c" />
+    <ClCompile Include="..\strings\ctype-euc_kr.c" />
+    <ClCompile Include="..\strings\ctype-gb2312.c" />
+    <ClCompile Include="..\strings\ctype-gbk.c" />
+    <ClCompile Include="..\strings\ctype-sjis.c" />
+    <ClCompile Include="..\strings\ctype-tis620.c" />
+    <ClCompile Include="..\strings\ctype-ujis.c" />
+    <ClCompile Include="..\strings\ctype.c" />
+    <ClCompile Include="..\strings\int2str.c" />
+    <ClCompile Include="..\strings\is_prefix.c" />
+    <ClCompile Include="..\strings\llstr.c" />
+    <ClCompile Include="..\strings\longlong2str.c" />
+    <ClCompile Include="..\strings\str2int.c" />
+    <ClCompile Include="..\strings\strcend.c" />
+    <ClCompile Include="..\strings\strcont.c" />
+    <ClCompile Include="..\strings\strend.c" />
+    <ClCompile Include="..\strings\strfill.c" />
+    <ClCompile Include="..\strings\strinstr.c" />
+    <ClCompile Include="..\strings\strmake.c" />
+    <ClCompile Include="..\strings\strmov.c" />
+    <ClCompile Include="..\strings\strnlen.c" />
+    <ClCompile Include="..\strings\strnmov.c" />
+    <ClCompile Include="..\strings\strxmov.c" />
+    <ClCompile Include="completion_hash.cpp" />
+    <ClCompile Include="readline.cpp" />
+    <ClCompile Include="select_test.c" />
+    <ClCompile Include="sql_string.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="completion_hash.h" />
+    <ClInclude Include="mysys_priv.h" />
+    <ClInclude Include="sql_string.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\zlib\zlib.vcxproj">
+      <Project>{4def7706-d3fc-4600-ad9a-d143b1e8a266}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

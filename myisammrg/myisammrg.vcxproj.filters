@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{61fb15e6-bf0c-42ff-9669-ebe70ebe7e9d}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{bc0eaf4d-0f39-4586-aff3-bf717e9eda93}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="myrg_close.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_create.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_delete.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_extra.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_info.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_locking.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_open.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_panic.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_queue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_rfirst.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_rkey.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_rlast.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_rnext.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_rprev.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_rrnd.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_rsame.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_static.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="myrg_update.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="mymrgdef.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

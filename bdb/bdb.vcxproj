@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Max|Win32">
+      <Configuration>Max</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{F66BBEA4-6620-4C1F-8554-27430173A33A}</ProjectGuid>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\lib_debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'">
+    <OutDir>.\bdb___Win32_Max\</OutDir>
+    <IntDir>.\bdb___Win32_Max\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>OldStyle</DebugInformationFormat>
+      <StringPooling>true</StringPooling>
+      <AdditionalIncludeDirectories>../bdb/build_win32;../bdb/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__WIN32__;_DEBUG;SAFEMALLOC;SAFE_MUTEX;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\bdb.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\bdb.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\lib_debug\bdb.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Max|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>../bdb/build_win32;../bdb/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;DBUG_OFF;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\bdb___Win32_Max\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\bdb___Win32_Max\bdb.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>mysys___Win32_Max/</ObjectFileName>
+      <ProgramDataBaseFileName>mysys___Win32_Max/</ProgramDataBaseFileName>
+    </ClCompile>
+    <ResourceCompile>
+      <Culture>0x0409</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\bdb___Win32_Max\bdb.bsc</OutputFile>
+    </Bscmake>
+    <Lib>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>..\lib_release\bdb.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="btree\btree_auto.c" />
+    <ClCompile Include="btree\bt_compare.c" />
+    <ClCompile Include="btree\bt_conv.c" />
+    <ClCompile Include="btree\bt_curadj.c" />
+    <ClCompile Include="btree\bt_cursor.c" />
+    <ClCompile Include="btree\bt_delete.c" />
+    <ClCompile Include="btree\bt_method.c" />
+    <ClCompile Include="btree\bt_open.c" />
+    <ClCompile Include="btree\bt_put.c" />
+    <ClCompile Include="btree\bt_rec.c" />
+    <ClCompile Include="btree\bt_reclaim.c" />
+    <ClCompile Include="btree\bt_recno.c" />
+    <ClCompile Include="btree\bt_rsearch.c" />
+    <ClCompile Include="btree\bt_search.c" />
+    <ClCompile Include="btree\bt_split.c" />
+    <ClCompile Include="btree\bt_stat.c" />
+    <ClCompile Include="btree\bt_upgrade.c" />
+    <ClCompile Include="btree\bt_verify.c" />
+    <ClCompile Include="clib\strcasecmp.c" />
+    <ClCompile Include="common\db_byteorder.c" />
+    <ClCompile Include="common\db_err.c" />
+    <ClCompile Include="common\db_getlong.c" />
+    <ClCompile Include="common\db_log2.c" />
+    <ClCompile Include="common\util_log.c" />
+    <ClCompile Include="common\util_sig.c" />
+    <ClCompile Include="cxx\cxx_app.cpp" />
+    <ClCompile Include="cxx\cxx_except.cpp" />
+    <ClCompile Include="cxx\cxx_lock.cpp" />
+    <ClCompile Include="cxx\cxx_log.cpp" />
+    <ClCompile Include="cxx\cxx_mpool.cpp" />
+    <ClCompile Include="cxx\cxx_table.cpp" />
+    <ClCompile Include="cxx\cxx_txn.cpp" />
+    <ClCompile Include="dbm\dbm.c" />
+    <ClCompile Include="db\crdel_auto.c" />
+    <ClCompile Include="db\crdel_rec.c" />
+    <ClCompile Include="db\db.c" />
+    <ClCompile Include="db\db_am.c" />
+    <ClCompile Include="db\db_auto.c" />
+    <ClCompile Include="db\db_cam.c" />
+    <ClCompile Include="db\db_conv.c" />
+    <ClCompile Include="db\db_dispatch.c" />
+    <ClCompile Include="db\db_dup.c" />
+    <ClCompile Include="db\db_iface.c" />
+    <ClCompile Include="db\db_join.c" />
+    <ClCompile Include="db\db_meta.c" />
+    <ClCompile Include="db\db_method.c" />
+    <ClCompile Include="db\db_overflow.c" />
+    <ClCompile Include="db\db_pr.c" />
+    <ClCompile Include="db\db_rec.c" />
+    <ClCompile Include="db\db_reclaim.c" />
+    <ClCompile Include="db\db_ret.c" />
+    <ClCompile Include="db\db_upg.c" />
+    <ClCompile Include="db\db_upg_opd.c" />
+    <ClCompile Include="db\db_vrfy.c" />
+    <ClCompile Include="db\db_vrfyutil.c" />
+    <ClCompile Include="env\db_salloc.c" />
+    <ClCompile Include="env\db_shash.c" />
+    <ClCompile Include="env\env_method.c" />
+    <ClCompile Include="env\env_open.c" />
+    <ClCompile Include="env\env_recover.c" />
+    <ClCompile Include="env\env_region.c" />
+    <ClCompile Include="hash\hash.c" />
+    <ClCompile Include="hash\hash_auto.c" />
+    <ClCompile Include="hash\hash_conv.c" />
+    <ClCompile Include="hash\hash_dup.c" />
+    <ClCompile Include="hash\hash_func.c" />
+    <ClCompile Include="hash\hash_meta.c" />
+    <ClCompile Include="hash\hash_method.c" />
+    <ClCompile Include="hash\hash_page.c" />
+    <ClCompile Include="hash\hash_rec.c" />
+    <ClCompile Include="hash\hash_reclaim.c" />
+    <ClCompile Include="hash\hash_stat.c" />
+    <ClCompile Include="hash\hash_upgrade.c" />
+    <ClCompile Include="hash\hash_verify.c" />
+    <ClCompile Include="hsearch\hsearch.c" />
+    <ClCompile Include="lock\lock.c" />
+    <ClCompile Include="lock\lock_conflict.c" />
+    <ClCompile Include="lock\lock_deadlock.c" />
+    <ClCompile Include="lock\lock_method.c" />
+    <ClCompile Include="lock\lock_region.c" />
+    <ClCompile Include="lock\lock_stat.c" />
+    <ClCompile Include="lock\lock_util.c" />
+    <ClCompile Include="log\log.c" />
+    <ClCompile Include="log\log_archive.c" />
+    <ClCompile Include="log\log_auto.c" />
+    <ClCompile Include="log\log_compare.c" />
+    <ClCompile Include="log\log_findckp.c" />
+    <ClCompile Include="log\log_get.c" />
+    <ClCompile Include="log\log_method.c" />
+    <ClCompile Include="log\log_put.c" />
+    <ClCompile Include="log\log_rec.c" />
+    <ClCompile Include="log\log_register.c" />
+    <ClCompile Include="mp\mp_alloc.c" />
+    <ClCompile Include="mp\mp_bh.c" />
+    <ClCompile Include="mp\mp_fget.c" />
+    <ClCompile Include="mp\mp_fopen.c" />
+    <ClCompile Include="mp\mp_fput.c" />
+    <ClCompile Include="mp\mp_fset.c" />
+    <ClCompile Include="mp\mp_method.c" />
+    <ClCompile Include="mp\mp_region.c" />
+    <ClCompile Include="mp\mp_register.c" />
+    <ClCompile Include="mp\mp_stat.c" />
+    <ClCompile Include="mp\mp_sync.c" />
+    <ClCompile Include="mp\mp_trickle.c" />
+    <ClCompile Include="mutex\mutex.c" />
+    <ClCompile Include="mutex\mut_tas.c" />
+    <ClCompile Include="os\os_alloc.c" />
+    <ClCompile Include="os\os_fsync.c" />
+    <ClCompile Include="os\os_handle.c" />
+    <ClCompile Include="os\os_method.c" />
+    <ClCompile Include="os\os_oflags.c" />
+    <ClCompile Include="os\os_region.c" />
+    <ClCompile Include="os\os_root.c" />
+    <ClCompile Include="os\os_rpath.c" />
+    <ClCompile Include="os\os_rw.c" />
+    <ClCompile Include="os\os_stat.c" />
+    <ClCompile Include="os\os_tmpdir.c" />
+    <ClCompile Include="os\os_unlink.c" />
+    <ClCompile Include="os_win32\os_abs.c" />
+    <ClCompile Include="os_win32\os_dir.c" />
+    <ClCompile Include="os_win32\os_errno.c" />
+    <ClCompile Include="os_win32\os_fid.c" />
+    <ClCompile Include="os_win32\os_finit.c" />
+    <ClCompile Include="os_win32\os_map.c" />
+    <ClCompile Include="os_win32\os_open.c" />
+    <ClCompile Include="os_win32\os_rename.c" />
+    <ClCompile Include="os_win32\os_seek.c" />
+    <ClCompile Include="os_win32\os_sleep.c" />
+    <ClCompile Include="os_win32\os_spin.c" />
+    <ClCompile Include="os_win32\os_type.c" />
+    <ClCompile Include="qam\qam.c" />
+    <ClCompile Include="qam\qam_auto.c" />
+    <ClCompile Include="qam\qam_conv.c" />
+    <ClCompile Include="qam\qam_files.c" />
+    <ClCompile Include="qam\qam_method.c" />
+    <ClCompile Include="qam\qam_open.c" />
+    <ClCompile Include="qam\qam_rec.c" />
+    <ClCompile Include="qam\qam_stat.c" />
+    <ClCompile Include="qam\qam_upgrade.c" />
+    <ClCompile Include="qam\qam_verify.c" />
+    <ClCompile Include="txn\txn.c" />
+    <ClCompile Include="txn\txn_auto.c" />
+    <ClCompile Include="txn\txn_rec.c" />
+    <ClCompile Include="txn\txn_region.c" />
+    <ClCompile Include="xa\xa.c" />
+    <ClCompile Include="xa\xa_db.c" />
+    <ClCompile Include="xa\xa_map.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
